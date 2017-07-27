@@ -520,19 +520,31 @@ textarea {
 --------------------------------------------------------------*/
 
 #masthead {
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	width: 100%;
+}
+
+#masthead #header-container {
 	display: flex;
 	align-items: center;
+	max-width: 920px;
+	margin: 0 auto;
 }
 
 #masthead .site-branding {
 	display: flex;
 	width: 100%;
 	align-items: center;
+	font-size: 80%;
 }
 
 #masthead .site-branding h1,
 #masthead .site-branding p {
 	margin: 0;
+}
+
+#masthead .site-branding .site-description {
+	margin-left: 1em;
 }
 
 #site-navigation {
@@ -541,6 +553,17 @@ textarea {
 	flex-direction: row;
 	justify-content: flex-end;
 	margin-left: auto;
+}
+
+#site-navigation a {
+	display: block;
+	text-decoration: none;
+	padding: 1rem;
+	border-right: 1px solid #DDD;
+}
+
+#site-navigation li:first-of-type a {
+	border-left: 1px solid #DDD;
 }
 
 
@@ -807,7 +830,7 @@ a:active {
 
 #container {
 	max-width: 920px;
-	margin: 0 auto;
+	margin: 1em auto 0;
 	display: flex;
 	flex-direction: row;
 	border: 1px solid;
@@ -846,6 +869,10 @@ a:active {
 	font-size: 85%;
 }
 
+#colophon .site-info {
+	text-align: center;
+	margin: 1.5em 0;
+}
 
 /*--------------------------------------------------------------
 ## Posts and pages
