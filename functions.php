@@ -155,3 +155,19 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Begin Additional Functions
+ */
+
+// Filter the except length to 20 words.
+function wpdocs_custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+// Excerpt string
+function wpdocs_excerpt_more( $more ) {
+    return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('...', 'your-text-domain') . '</a>';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
