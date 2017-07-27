@@ -855,6 +855,11 @@ a:active {
 	margin: 0 0 0.5rem 0;
 }
 
+#primary.page-no-sidebar {
+  width: 100%;
+	margin: 0;
+}
+
 #secondary {
 	width: 22%;
 	margin: 0 0 1rem 1rem;
