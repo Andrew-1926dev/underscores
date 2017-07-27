@@ -15,9 +15,8 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'underscores' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'underscores' ), 'WordPress' );
+			<a href="<?php echo esc_url( __( 'http://peakdigitalagency.com', 'underscores' ) ); ?>"><?php
+				printf( esc_html__( 'This theme was developed by %s', 'underscores' ), 'Peak Digital Agency' );
 			?></a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

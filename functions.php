@@ -61,7 +61,7 @@ if ( ! function_exists( 'underscores_setup' ) ) :
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'underscores_custom_background_args', array(
-			'default-color' => 'ffffff',
+			'default-color' => 'f0f0f0',
 			'default-image' => '',
 		) ) );
 
@@ -171,3 +171,6 @@ function wpdocs_excerpt_more( $more ) {
     return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('...', 'your-text-domain') . '</a>';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+// Remove edit link on posts
+add_filter( 'edit_post_link', '__return_false' );

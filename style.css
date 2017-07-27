@@ -520,22 +520,32 @@ textarea {
 --------------------------------------------------------------*/
 
 #masthead {
-	border-bottom: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	width: 100%;
 }
 
-#masthead #header-container {
-	display: flex;
-	align-items: center;
-	max-width: 920px;
-	margin: 0 auto;
+@media (min-width: 600px) {
+	#masthead #header-container {
+		display: flex;
+		align-items: center;
+		max-width: 920px;
+		margin: 0 auto;
+	}
+	#masthead .site-branding {
+		display: flex;
+		width: 100%;
+		align-items: center;
+	}
 }
 
-#masthead .site-branding {
-	display: flex;
-	width: 100%;
-	align-items: center;
-	font-size: 80%;
+#masthead .site-title {
+	font-size: 1.75em;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+#masthead .site-title a {
+	text-decoration: none;
 }
 
 #masthead .site-branding h1,
@@ -547,25 +557,21 @@ textarea {
 	margin-left: 1em;
 }
 
-#site-navigation {
-	display: flex;
-	width: 100%;
-	flex-direction: row;
-	justify-content: flex-end;
-	margin-left: auto;
+@media (min-width: 600px) {
+	#site-navigation {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		justify-content: flex-end;
+		margin-left: auto;
+	}
 }
 
 #site-navigation a {
 	display: block;
 	text-decoration: none;
 	padding: 1rem;
-	border-right: 1px solid #DDD;
 }
-
-#site-navigation li:first-of-type a {
-	border-left: 1px solid #DDD;
-}
-
 
 /*--------------------------------------------------------------
 ## Links
@@ -874,6 +880,7 @@ a:active {
 	margin: 1.5em 0;
 }
 
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -991,7 +998,6 @@ object {
 .wp-caption-text {
 	text-align: center;
 }
-
 
 /*--------------------------------------------------------------
 ## Galleries
