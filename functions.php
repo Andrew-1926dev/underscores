@@ -84,6 +84,44 @@ endif;
 add_action( 'after_setup_theme', 'underscores_setup' );
 
 /**
+ * Tell wordpress to load this for custom login page
+ */
+function my_custom_login() {
+  echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/login/custom-login-styles.css" />';
+}
+add_action('login_head', 'my_custom_login');
+
+/**
+ * Change URL That Logo Links To
+ */
+function my_login_logo_url() {
+  return get_bloginfo( 'url' );
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+  return 'Peak Digital Agency';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+/**
+ * Hide Login Error Message
+ */
+function login_error_override()
+{
+    return "Whoops. That login doesn't seem right.";
+}
+add_filter('login_errors', 'login_error_override');
+
+/**
+ * Remove Login Page Shake
+ */
+function my_login_head() {
+  remove_action('login_head', 'wp_shake_js', 12);
+}
+add_action('login_head', 'my_login_head');
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
