@@ -516,8 +516,32 @@ textarea {
 
 
 /*--------------------------------------------------------------
-# Navigation
+# Navigation and Header
 --------------------------------------------------------------*/
+
+.banner {
+  display: flex;
+  height: 140px;
+  background-image: url("images/bannerBackground.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.banner img {
+  height: 100%;
+  padding: 1rem;
+}
+
+.bannerTitle {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.bannerTitle h1 {
+  align-self: center;
+}
 
 #masthead {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);

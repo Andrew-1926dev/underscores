@@ -26,8 +26,14 @@
 			<a class="skip-link screen-reader-text" href="#content">
 				<?php esc_html_e( 'Skip to content', 'underscores' ); ?>
 			</a>
-
+      
 			<header id="masthead" class="site-header">
+        <div class="banner">
+          <img src="<?php echo get_template_directory_uri() ?>/images/bannerLogo.png" alt="Peak Digital Agency">
+          <div class="bannerTitle">
+            <h1>Peak Digital Agency</h1>
+          </div>
+        </div>
 				<div id="header-container" class="header-container">
 					<div class="site-branding">
 						<?php
