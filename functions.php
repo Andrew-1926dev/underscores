@@ -41,11 +41,13 @@ if ( ! function_exists( 'underscores_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'underscores' ),
-		) );
+		
+		// Navigation Menus
+		register_nav_menus(array(
+			'menu-1' => esc_html__( 'Underscores Primary', 'underscores' ),
+			'hd-buttons' => __( 'Header Buttons' ),
+			'footer' => __( 'Footer Primary' ),
+		));
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
