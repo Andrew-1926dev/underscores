@@ -32,7 +32,9 @@
 					
 					<?php if ( has_post_thumbnail() ) : ?>
 
-						<?php the_post_thumbnail('banner-image'); ?>
+						<?php // the_post_thumbnail('banner-image'); ?>
+					
+					<div class="bg-image" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>);"> </div>
 
 					<?php endif; ?>
 					

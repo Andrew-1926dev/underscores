@@ -552,15 +552,21 @@ textarea {
 	display: flex;
 }
 
+.banner .bg-image {
+	background-size: 100%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 .banner .hd-branding {
 	display: flex;
 }
 
 .hd-branding-container {
-    display: flex;
-    height: 100px;
-    align-items: center;
-
+	display: flex;
+	height: 100px;
+	align-items: center;
 }
 
 .banner .hd-logo {
