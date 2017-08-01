@@ -571,7 +571,6 @@ textarea {
 
 .banner .hd-logo {
 	position: absolute;
-	top: 0;
 	left: 0;
 	margin: 0.75em 1em;
 	max-width: 75px;
@@ -673,10 +672,10 @@ textarea {
 	margin-left: 1em;
 }
 
-.site-nav {
-	position: absolute;
-	right: 0;
-	top: 0;
+.site-nav.footer-nav {
+	margin: 1em auto 0;
+	display: flex;
+	justify-content: center;
 }
 
 .site-nav ul {
@@ -976,13 +975,10 @@ a:active {
 	border: 1px solid;
 }
 
-#primary {
-	width: 78%;
-	margin: 0 1rem 1rem 0;
-}
-
 #primary article {
 	padding: 1em;
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 #primary .entry-title {
@@ -1016,7 +1012,7 @@ a:active {
 
 #colophon .site-info {
 	text-align: center;
-	margin: 1.5em 0;
+	margin: 0.025em 0 1em;
 }
 
 
@@ -1039,7 +1035,11 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0;
+}
+
+#lipsum p:first-of-type {
+	margin-top: 0;
 }
 
 .page-links {

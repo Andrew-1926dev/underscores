@@ -48,7 +48,7 @@
 		</div>
 		<!--footer-widgets-->
 
-		<nav class="site-nav">
+		<nav class="site-nav footer-nav">
 
 			<?php
 

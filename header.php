@@ -51,30 +51,13 @@
 							<h2 class="page-title"><?php the_title(); ?></h2>
 
 						</div>
-						
-<!--
-						<nav class="site-nav">
-				
-							<?php
-
-//								$args = array(
-//									'theme_location' => 'hd-buttons'
-//								);
-
-							?>
-
-							<?php // wp_nav_menu(  $args ); ?>
-
-						</nav>
--->
-						
+	
 					</div>
-						
-					<?php } else { ?>
 
 					<?php } ?>
 					
         </div>
+				
 				<div id="header-container" class="header-container">
 					<div class="site-branding">
 						<?php
