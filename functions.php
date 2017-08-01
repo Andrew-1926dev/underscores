@@ -41,11 +41,13 @@ if ( ! function_exists( 'underscores_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'underscores' ),
-		) );
+		
+		// Navigation Menus
+		register_nav_menus(array(
+			'menu-1' => esc_html__( 'Underscores Primary', 'underscores' ),
+			'hd-buttons' => __( 'Header Buttons' ),
+			'footer' => __( 'Footer Primary' ),
+		));
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -212,3 +214,55 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 // Remove edit link on posts
 add_filter( 'edit_post_link', '__return_false' );
+
+// Add Widget Areas
+function ourWidgetsInit() {
+	
+	register_sidebar( array(
+		'name' => 'Sidebar',
+		'id' => 'sidebar1',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 1',
+		'id' => 'footer1',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 2',
+		'id' => 'footer2',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 3',
+		'id' => 'footer3',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 4',
+		'id' => 'footer4',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+	
+}
+
+add_action('widgets_init', 'ourWidgetsInit');
