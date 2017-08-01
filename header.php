@@ -47,8 +47,8 @@
               <?php $uploads = wp_upload_dir(); ?>
 
               <?php echo '<img class="hd-logo" src="' . esc_url( $uploads['baseurl'] . '/bannerLogo.png' ) . '" alt="site logo">'; ?>
-
-							<h2 class="page-title"><?php the_title(); ?></h2>
+              
+							<h2 class="page-title"><?php bloginfo( 'name' ); ?></h2>
 
 						</div>
 	
@@ -59,25 +59,6 @@
         </div>
 				
 				<div id="header-container" class="header-container">
-					<div class="site-branding">
-						<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-							<h1 class="site-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-									<?php bloginfo( 'name' ); ?>
-								</a>
-							</h1>
-							<?php else : ?>
-							<p class="site-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-									<?php bloginfo( 'name' ); ?>
-								</a>
-							</p>
-							<?php endif; ?>
-						
-					</div>
-					<!-- .site-branding -->
 
 					<nav id="site-navigation" class="main-navigation">
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underscores' ); ?></button>

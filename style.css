@@ -520,43 +520,16 @@ textarea {
 --------------------------------------------------------------*/
 
 
-/*
-
-.banner {
-  display: flex;
-  height: 140px;
-  background-image: url("images/bannerBackground.jpg");
-  background-size: cover;
-  background-position: bottom;
-}
-
-.banner img {
-  height: 100%;
-  padding: 1rem;
-}
-
-.bannerTitle {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
-}
-
-.bannerTitle h1 {
-  align-self: center;
-}
-*/
-
 .banner {
 	position: relative;
 	display: flex;
 }
 
 .banner .bg-image {
-	background-size: 100%;
 	width: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .banner .hd-branding {
@@ -565,16 +538,17 @@ textarea {
 
 .hd-branding-container {
 	display: flex;
-	height: 100px;
+	height: 140px;
 	align-items: center;
 }
 
 .banner .hd-logo {
 	position: absolute;
+	top: 0;
 	left: 0;
 	margin: 0.75em 1em;
-	max-width: 75px;
-	height: auto;
+	width: auto;
+	max-height: calc(140px - (2*.75em));
 }
 
 .banner .page-title {
@@ -582,69 +556,20 @@ textarea {
 	text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
 	position: absolute;
 	right: 0;
-	color: #FBFBFB;
+	color: #EF4150;
 	margin: 0.75em 1em;
 }
 
-
-/*
-
-.banner .page-title {
-	font-size: 1.75em;
-	top: 1em;
-}
-*/
-
-
-/*
-
-@media (min-width: 300px) {
-	.banner .page-title {
-		font-size: 2em;
-		top: 0.5em;
-	}
-}
-
-@media (min-width: 400px) {
-	.banner .page-title {
-		font-size: 2em;
-		top: 1.25em;
-	}
-}
-
-@media (min-width: 600px) {
-	.banner .page-title {
-		font-size: 2.5em;
-		top: 1.5em;
-	}
-}
-
-@media (min-width: 800px) {
-	.banner .page-title {
-		font-size: 3em;
-		top: 1.5em;
-	}
-}
-
-@media (min-width: 1000px) {
-	.banner .page-title {
-		font-size: 3.5em;
-		top: 1.5em;
-	}
-}
-*/
-
 #masthead {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	width: 100%;
 }
 
 @media (min-width: 600px) {
 	#masthead #header-container {
 		display: flex;
-		align-items: center;
-		max-width: 920px;
-		margin: 0 auto;
+    justify-content: center;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 	}
 	#masthead .site-branding {
 		display: flex;
@@ -672,10 +597,10 @@ textarea {
 	margin-left: 1em;
 }
 
-.site-nav.footer-nav {
-	margin: 0.5em auto 0;
-	display: flex;
-	justify-content: center;
+.site-nav {
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
 .site-nav ul {
@@ -691,24 +616,19 @@ textarea {
 
 @media (min-width: 600px) {
 	#site-navigation {
-		display: flex;
-		width: 100%;
-		flex-direction: row;
-		justify-content: flex-end;
-		margin-left: auto;
+    display: flex;
+    justify-content: center;
+		width: 920px;
 	}
 }
 
 #site-navigation a {
+  color: #EF4150;
 	display: block;
 	text-decoration: none;
 	padding: 1rem;
 }
 
-.footer-widgets {
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
-	margin-top: 2em;
-}
 
 /*--------------------------------------------------------------
 ## Links
@@ -976,7 +896,6 @@ a:active {
 	margin: 1em auto 0;
 	display: flex;
 	flex-direction: row;
-	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #primary article {
