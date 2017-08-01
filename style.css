@@ -516,8 +516,110 @@ textarea {
 
 
 /*--------------------------------------------------------------
-# Navigation
+# Navigation and Header
 --------------------------------------------------------------*/
+
+
+/*
+
+.banner {
+  display: flex;
+  height: 140px;
+  background-image: url("images/bannerBackground.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.banner img {
+  height: 100%;
+  padding: 1rem;
+}
+
+.bannerTitle {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.bannerTitle h1 {
+  align-self: center;
+}
+*/
+
+.banner {
+	position: relative;
+	display: flex;
+}
+
+.banner .hd-branding {
+	display: flex;
+}
+
+.banner .hd-logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0.75em 1em;
+	max-width: 75px;
+	height: auto;
+}
+
+.banner .page-title {
+	font-size: 2.5em;
+	/* Needs Responsiveness Maybe flex */
+	font-weight: 400;
+	text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
+	position: absolute;
+	margin: 0;
+	top: 2.5em;
+	/* Needs Responsiveness Maybe flex */
+	right: 0;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	color: #FBFBFB;
+}
+
+.banner .page-title {
+	font-size: 1.75em;
+	top: 1em;
+}
+
+@media (min-width: 300px) {
+	.banner .page-title {
+		font-size: 2em;
+		top: 0.5em;
+	}
+}
+
+@media (min-width: 400px) {
+	.banner .page-title {
+		font-size: 2em;
+		top: 1.25em;
+	}
+}
+
+@media (min-width: 600px) {
+	.banner .page-title {
+		font-size: 2.5em;
+		top: 1.5em;
+	}
+}
+
+@media (min-width: 800px) {
+	.banner .page-title {
+		font-size: 3em;
+		top: 1.5em;
+	}
+}
+
+@media (min-width: 1000px) {
+	.banner .page-title {
+		font-size: 3.5em;
+		top: 1.5em;
+	}
+}
 
 #masthead {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -557,6 +659,23 @@ textarea {
 	margin-left: 1em;
 }
 
+.site-nav {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.site-nav ul {
+	margin: 0.75em 1em;
+	padding: 0;
+	display: flex;
+	list-style-type: none;
+}
+
+.site-nav ul li {
+	margin-left: 1em;
+}
+
 @media (min-width: 600px) {
 	#site-navigation {
 		display: flex;
@@ -572,6 +691,7 @@ textarea {
 	text-decoration: none;
 	padding: 1rem;
 }
+
 
 /*--------------------------------------------------------------
 ## Links
@@ -856,7 +976,7 @@ a:active {
 }
 
 #primary.page-no-sidebar {
-  width: 100%;
+	width: 100%;
 	margin: 0;
 }
 
@@ -1003,6 +1123,7 @@ object {
 .wp-caption-text {
 	text-align: center;
 }
+
 
 /*--------------------------------------------------------------
 ## Galleries
