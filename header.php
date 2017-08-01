@@ -26,8 +26,45 @@
 			<a class="skip-link screen-reader-text" href="#content">
 				<?php esc_html_e( 'Skip to content', 'underscores' ); ?>
 			</a>
-
+      
 			<header id="masthead" class="site-header">
+        <div class="banner">
+					
+					<?php if ( has_post_thumbnail() ) : ?>
+
+						<?php the_post_thumbnail('banner-image'); ?>
+
+					<?php endif; ?>
+					
+          <?php if ( is_page() || is_single() || is_archive() ) { ?>
+					
+					<div class="hd-branding">
+						
+						<img class="hd-logo" src="http://localhost/underscores/wp-content/themes/underscores/images/bannerLogo.png">
+						
+						<h2 class="page-title"><?php the_title(); ?></h2>
+						
+						<nav class="site-nav">
+				
+							<?php
+
+								$args = array(
+									'theme_location' => 'hd-buttons'
+								);
+
+							?>
+
+							<?php wp_nav_menu(  $args ); ?>
+
+						</nav>
+						
+					</div>
+						
+					<?php } else { ?>
+
+					<?php } ?>
+					
+        </div>
 				<div id="header-container" class="header-container">
 					<div class="site-branding">
 						<?php
