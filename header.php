@@ -43,8 +43,10 @@
 					<div class="hd-branding">
 						
 						<div class="hd-branding-container">
+              
+              <?php $uploads = wp_upload_dir(); ?>
 
-							<img class="hd-logo" src="http://localhost/underscores/wp-content/themes/underscores/images/bannerLogo.png">
+              <?php echo '<img class="hd-logo" src="' . esc_url( $uploads['baseurl'] . '/bannerLogo.png' ) . '" alt="site logo">'; ?>
 
 							<h2 class="page-title"><?php the_title(); ?></h2>
 
