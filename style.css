@@ -556,6 +556,13 @@ textarea {
 	display: flex;
 }
 
+.hd-branding-container {
+    display: flex;
+    height: 100px;
+    align-items: center;
+
+}
+
 .banner .hd-logo {
 	position: absolute;
 	top: 0;
@@ -566,25 +573,25 @@ textarea {
 }
 
 .banner .page-title {
-	font-size: 2.5em;
-	/* Needs Responsiveness Maybe flex */
 	font-weight: 400;
 	text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
 	position: absolute;
-	margin: 0;
-	top: 2.5em;
-	/* Needs Responsiveness Maybe flex */
 	right: 0;
-	left: 0;
-	bottom: 0;
-	text-align: center;
 	color: #FBFBFB;
+	margin: 0.75em 1em;
 }
+
+
+/*
 
 .banner .page-title {
 	font-size: 1.75em;
 	top: 1em;
 }
+*/
+
+
+/*
 
 @media (min-width: 300px) {
 	.banner .page-title {
@@ -620,6 +627,7 @@ textarea {
 		top: 1.5em;
 	}
 }
+*/
 
 #masthead {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);

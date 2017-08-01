@@ -40,23 +40,29 @@
 					
 					<div class="hd-branding">
 						
-						<img class="hd-logo" src="http://localhost/underscores/wp-content/themes/underscores/images/bannerLogo.png">
+						<div class="hd-branding-container">
+
+							<img class="hd-logo" src="http://localhost/underscores/wp-content/themes/underscores/images/bannerLogo.png">
+
+							<h2 class="page-title"><?php the_title(); ?></h2>
+
+						</div>
 						
-						<h2 class="page-title"><?php the_title(); ?></h2>
-						
+<!--
 						<nav class="site-nav">
 				
 							<?php
 
-								$args = array(
-									'theme_location' => 'hd-buttons'
-								);
+//								$args = array(
+//									'theme_location' => 'hd-buttons'
+//								);
 
 							?>
 
-							<?php wp_nav_menu(  $args ); ?>
+							<?php // wp_nav_menu(  $args ); ?>
 
 						</nav>
+-->
 						
 					</div>
 						
