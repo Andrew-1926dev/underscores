@@ -892,11 +892,7 @@ a:active {
 /* Make sure select elements fit in widgets. */
 
 .widget select {
-<<<<<<< HEAD
-	max-width: 100%;
-=======
   max-width: 100%;
->>>>>>> 17767d213c9ea89ff59137e0fd5af139a1efe817
 }
 
 
@@ -920,16 +916,19 @@ a:active {
 	max-width: 100%;
 }
 
+#primary article {
+	padding: 0;
+}
+
 #container {
   max-width: 920px;
-  margin: 1em auto 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
 
 #primary article {
-  padding: 1em;
-  padding-bottom: 0;
+  padding: 0;
   margin-bottom: 0;
 }
 
@@ -1150,11 +1149,6 @@ object {
 
 /* Opt-in Floating Email */
 
-#masthead,
-#colophon,
-.entry-footer {
-	display: none;
-}
 
 #opt-in-floating-email #gform_2 {
 	display: flex;
@@ -1164,14 +1158,6 @@ object {
 
 #opt-in-floating-email #gform_submit_button_2 {
 	margin: 0;
-}
-
-#primary article {
-	padding: 0;
-}
-
-#container {
-	margin: 0 auto;
 }
 
 #opt-in-floating-email h2 {
