@@ -96,9 +96,13 @@ a {
 	background-color: transparent;
 }
 
+s,
 a:active,
-a:hover {
-	outline: 0;
+a:hover,
+a:focus,
+a:link, 
+a:visited {
+	outline-color: transparent;
 }
 
 abbr[title] {
@@ -519,7 +523,6 @@ textarea {
 # Navigation and Header
 --------------------------------------------------------------*/
 
-
 .banner {
 	position: relative;
 	display: flex;
@@ -529,7 +532,7 @@ textarea {
 	width: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
-  background-size: cover;
+	background-size: cover;
 }
 
 .banner .hd-branding {
@@ -567,9 +570,9 @@ textarea {
 @media (min-width: 600px) {
 	#masthead #header-container {
 		display: flex;
-    justify-content: center;
+		justify-content: center;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
 	}
 	#masthead .site-branding {
 		display: flex;
@@ -616,17 +619,28 @@ textarea {
 
 @media (min-width: 600px) {
 	#site-navigation {
-    display: flex;
-    justify-content: center;
+		display: flex;
+		justify-content: center;
 		width: 920px;
 	}
 }
 
 #site-navigation a {
-  color: #EF4150;
+	color: #EF4150;
 	display: block;
 	text-decoration: none;
 	padding: 1rem;
+}
+
+ul#primary-menu li a {
+	border: 3px solid transparent;
+	border-left: none;
+	border-right: none;
+}
+
+ul#primary-menu li a:hover,
+ul#primary-menu li.current_page_item a {
+	border-bottom-color: #EF4150;
 }
 
 
@@ -646,10 +660,6 @@ a:hover,
 a:focus,
 a:active {
 	color: midnightblue;
-}
-
-a:focus {
-	outline: thin dotted;
 }
 
 a:hover,
@@ -883,7 +893,18 @@ a:active {
 /* Make sure select elements fit in widgets. */
 
 .widget select {
-	max-width: 100%;
+	max-width: 100%;	
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.footer-widgets {
+	display: flex;
+	justify-content: space-evenly;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 
