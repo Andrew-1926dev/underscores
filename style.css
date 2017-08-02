@@ -100,7 +100,7 @@ s,
 a:active,
 a:hover,
 a:focus,
-a:link, 
+a:link,
 a:visited {
 	outline-color: transparent;
 }
@@ -893,8 +893,9 @@ a:active {
 /* Make sure select elements fit in widgets. */
 
 .widget select {
-	max-width: 100%;	
+	max-width: 100%;
 }
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -911,6 +912,10 @@ a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+
+#primary {
+	max-width: 100%;
+}
 
 #container {
 	max-width: 920px;
@@ -1132,4 +1137,112 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+
+/*--------------------------------------------------------------
+## Templates CSS
+--------------------------------------------------------------*/
+
+
+/* Opt-in Floating Email */
+
+#masthead,
+#colophon,
+.entry-footer {
+	display: none;
+}
+
+#opt-in-floating-email #gform_2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#opt-in-floating-email #gform_submit_button_2 {
+	margin: 0;
+}
+
+#primary article {
+	padding: 0;
+}
+
+#container {
+	margin: 0 auto;
+}
+
+#opt-in-floating-email h2 {
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+#opt-in-floating-email h2:first-of-type {
+	margin-bottom: 0;
+}
+
+#opt-in-floating-email h2:last-of-type {
+	margin: 0 0 0.75em;
+	font-weight: 400;
+}
+
+#opt-in-floating-email .wpb_content_element {
+	margin-bottom: 0;
+}
+
+#opt-in-floating-email .gform_wrapper {
+	margin-top: 0;
+	margin-bottom: 2em;
+}
+
+#opt-in-floating-email .floating {}
+
+#opt-in-floating-email .center {}
+
+@media screen and (max-width:660px) {
+	#opt-in-floating-email #gform_fields_2,
+	#opt-in-floating-email .gform_body {
+		display: flex;
+		width: 100%;
+	}
+	#opt-in-floating-email #field_2_1 {
+		width: 100%;
+	}
+	#opt-in-floating-email #gform_2 {
+		flex-direction: column;
+	}
+}
+
+
+/* Opt-in Floating Thirds */
+
+#opt-in-floating-thirds h1 {
+	font-size: 2em;
+}
+
+#opt-in-floating-thirds h3 {
+	margin-bottom: 0;
+}
+
+#opt-in-floating-thirds .gfield_label {
+	display: none !important;
+}
+
+#opt-in-floating-thirds .gform_wrapper .gform_footer {
+	margin: 0;
+}
+
+#opt-in-floating-thirds #gform_submit_button_3 {
+	width: 100%;
+}
+
+#opt-in-floating-thirds .wpb_content_element {
+	margin-bottom: 0;
+}
+
+#opt-in-floating-thirds .gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+	width: 100%;
+}
+
+#opt-in-floating-thirds .gform_wrapper ul.gform_fields li.gfield {
+	padding-right: 0;
 }
